@@ -326,7 +326,7 @@ function Page() {
                                         <h3>{reference.location}</h3>
                                         <p>{reference.purpose}</p>
                                         <p>{reference.year}</p>
-                                        <p>"{reference.status}"</p>
+                                        <p>&quot;{reference.status}&quot;</p>
                                         <div className="adminReferencesCardActions">
                                             <button onClick={() => handleEditReference(reference)}>Düzenle</button>
                                             <button onClick={() => {

@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import Script from "next/script";
 
 export const metadata = {
   title: "DG Mimarlık",
