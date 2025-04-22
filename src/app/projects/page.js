@@ -1,10 +1,14 @@
+// /src/app/projects/page.js
 import Link from 'next/link';
 import { adminDb } from '../../../firebaseAdmin';
+import { notFound } from 'next/navigation';
 import './projects.css';
 
-export const dynamic = 'force-dynamic'; // SSR
+export const dynamic = 'force-dynamic';
 
-export default async function Page() {
+export default async function Page({ searchParams }) {
+    const selectedTag = searchParams?.tag || "Tümü";
+
     const snapshot = await adminDb.ref('references').once('value');
     const tagsSnap = await adminDb.ref('tags').once('value');
 
@@ -17,29 +21,30 @@ export default async function Page() {
 
     const tags = tagsData ? Object.values(tagsData) : [];
 
+    const filteredProjects =
+        selectedTag === "Tümü"
+            ? projects
+            : projects.filter((p) => p.tags?.includes(selectedTag));
+
     return (
         <div className='projectsMain'>
             <div className="projectTagsNavbar">
-                <form>
-                    <input type="hidden" name="selectedTag" value="Tümü" />
-                </form>
-                <button className='active'>Tümü</button>
+                <Link href="/projects" scroll={false}>
+                    <button className={selectedTag === "Tümü" ? 'active' : ''}>Tümü</button>
+                </Link>
                 {tags
                     .filter((tag) =>
                         projects.some((p) => p.tags?.includes(tag))
                     )
                     .map((tag, index) => (
-                        <button
-                            key={index}
-                            className={''}
-                        >
-                            {tag}
-                        </button>
+                        <Link key={index} href={`/projects?tag=${encodeURIComponent(tag)}`} scroll={false}>
+                            <button className={selectedTag === tag ? 'active' : ''}>{tag}</button>
+                        </Link>
                     ))}
             </div>
 
-            <div className={`projectsGrid ${projects.length === 1 ? 'singleProject' : ''}`}>
-                {projects.map((project) => (
+            <div className={`projectsGrid ${filteredProjects.length === 1 ? 'singleProject' : ''}`}>
+                {filteredProjects.map((project) => (
                     <Link key={project.id} href={`/projects/${project.id}`} className="projectCard">
                         <div className="projectCardImageWrapper">
                             <img

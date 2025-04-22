@@ -60,18 +60,7 @@ export default async function ProjectDetail({ params }) {
                 </div>
             )}
 
-            {project.images && project.images.filter(Boolean).length > 0 && (
-                <div className="gallerySection">
-                    {project.images.filter(Boolean).map((img, idx) => (
-                        <img
-                            key={idx}
-                            src={img}
-                            alt={`Proje Foto ${idx + 1}`}
-                            className="galleryImage"
-                        />
-                    ))}
-                </div>
-            )}
+
             {project.images && project.images.filter(Boolean).length > 0 && (
                 <ImagePopup images={project.images.filter(Boolean)} />
             )}
