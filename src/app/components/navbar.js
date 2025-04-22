@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 
 import "../style/navbar.css"
 
-function navbar() {
+function Navbar() {
     const pathname = usePathname();
     return (
         <div className='NavbarMain'>
@@ -44,4 +44,4 @@ function navbar() {
     )
 }
 
-export default navbar
+export default Navbar

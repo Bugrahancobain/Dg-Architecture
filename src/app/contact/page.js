@@ -12,7 +12,7 @@ import { FaUser, FaEnvelope, FaPhone, FaInfoCircle, FaPencilAlt } from "react-ic
 import emailjs from "@emailjs/browser";
 import "./contact.css"
 import Link from "next/link";
-function page() {
+function Page() {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -128,4 +128,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
