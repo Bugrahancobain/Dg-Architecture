@@ -1,0 +1,114 @@
+.projectsMain{
+  padding-top: 100px;  
+}
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+  .singleProject {
+    grid-template-columns: repeat(1, 300px);
+    justify-content: center;
+  }
+  
+  .projectCard {
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  .projectCardImageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .projectCardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+  }
+  
+  .projectCardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .projectCard:hover .projectCardImage {
+    filter: grayscale(100%);
+  }
+  
+  .projectCard:hover .projectCardOverlay {
+    opacity: 1;
+  }
+
+  .projectTagsNavbar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.15) 0px 4px 15px 0px;
+    transition: all 0.3s;
+}
+
+.projectTagsNavbar:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.projectTagsNavbar button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    color: black;
+    transition: color 0.3s;
+}
+
+.projectTagsNavbar button::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.projectTagsNavbar button:hover::after,
+.projectTagsNavbar button.active::after {
+    width: 80%;
+}

@@ -1,0 +1,77 @@
+.companyCardsMain {
+    padding: 100px 40px 60px;
+    text-align: center;
+  }
+  
+  .companyCardsMain h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .companyCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .companyCardLink {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .companyCardBox {
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f9f9f9;
+  }
+  
+  .clickableArea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .companyCardLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    transition: filter 0.3s ease;
+  }
+  
+  .companyCardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .companyCardBox:hover .companyCardLogo {
+    filter: grayscale(100%);
+  }
+  
+  .companyCardBox:hover .companyCardOverlay {
+    opacity: 1;
+  }

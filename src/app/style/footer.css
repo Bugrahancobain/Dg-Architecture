@@ -1,0 +1,85 @@
+.footerMain{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    border-bottom: grey 1px solid;
+}
+.footerLogoLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSocial{
+    font-size: x-large; 
+}
+
+.footerSocial a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    font-size:x-large;  
+}
+
+.footerLogoImg{
+    height: 70px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+h6{
+    font-weight: bold;
+    font-size: 16;
+}
+
+.footerContactDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.footerContactDiv a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.footerCopyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.footerProjectList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.footerProjectItem {
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footerProjectItem:hover {
+    text-decoration: none;
+    color: grey;
+}
+
+.footerProjectList a {
+    text-decoration: none;
+}

@@ -1,0 +1,34 @@
+.videoContainer {
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 150px;
+    margin-bottom: 100px;
+  }
+  
+  .videoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+  }
+  
+  .videoItem p {
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .loadMoreBtn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loadMoreBtn:hover {
+    background-color: #333;
+  }

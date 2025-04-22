@@ -1,0 +1,91 @@
+.ourProjectsMain {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.ourProjectsMain h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.ourProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ourProjectCard {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.ourProjectCardImageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ourProjectCardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.ourProjectCardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.ourProjectCard:hover .ourProjectCardImage {
+    filter: grayscale(100%);
+}
+
+.ourProjectCard:hover .ourProjectCardOverlay {
+    opacity: 1;
+}
+
+.ourProjectsButtonWrapper {
+    margin-top: 40px;
+}
+
+.singleProject {
+    grid-template-columns: repeat(1, 300px);
+    justify-content: center;
+  }
+
+.ourProjectsButton {
+    background-color: black;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ourProjectsButton:hover {
+    background-color: #5c5c5d;
+}
