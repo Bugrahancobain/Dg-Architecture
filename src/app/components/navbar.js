@@ -1,16 +1,14 @@
 "use client";
-import Link from 'next/link'
-import React from 'react'
-import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import Link from 'next/link';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-
-import "../style/navbar.css"
+import { FaBars, FaTimes, FaInstagram, FaWhatsapp, FaYoutube, FaLinkedin } from "react-icons/fa";
+import "../style/navbar.css";
 
 function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
+
     return (
         <div className='NavbarMain'>
             <div className='NavbarLogo'>
@@ -19,29 +17,27 @@ function Navbar() {
                 </Link>
             </div>
 
-            <div className='NavbarLinks'>
-                <Link href="/" className={pathname === '/' ? 'active' : ''}>Ana Sayfa</Link>
-                <Link href="/aboutUs" className={pathname === '/aboutUs' ? 'active' : ''}>Hakkımızda</Link>
-                <Link href="/projects" className={pathname === '/projects' ? 'active' : ''}>Projeler</Link>
-                <Link href="/videos" className={pathname === '/videos' ? 'active' : ''}>Videolar</Link>
-                <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>İletişim</Link>
+            <div className='NavbarBurger' onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <FaTimes /> : <FaBars />}
             </div>
-            <div className='NavbarSocial'>
-                <Link target='_blank' href="https://www.instagram.com/arc.damlagocer/">
-                    <FaInstagram />
-                </Link>
-                <Link target='_blank' href="https://api.whatsapp.com/send/?phone=%2B905050459890&text&type=phone_number&app_absent=0">
-                    <FaWhatsapp />
-                </Link>
-                <Link target='_blank' href="https://www.youtube.com/@arc.damlag%C3%B6%C3%A7er">
-                    <FaYoutube />
-                </Link>
-                <Link target='_blank' href="https://www.linkedin.com/in/damla-g%C3%B6%C3%A7er-1a6948312/">
-                    <FaLinkedin />
-                </Link>
+
+            <div className={`NavbarLinks ${menuOpen ? 'open' : ''}`}>
+                <div>
+                    <Link href="/" onClick={() => setMenuOpen(false)} className={pathname === '/' ? 'active' : ''}>Ana Sayfa</Link>
+                    <Link href="/aboutUs" onClick={() => setMenuOpen(false)} className={pathname === '/aboutUs' ? 'active' : ''}>Hakkımızda</Link>
+                    <Link href="/projects" onClick={() => setMenuOpen(false)} className={pathname === '/projects' ? 'active' : ''}>Projeler</Link>
+                    <Link href="/videos" onClick={() => setMenuOpen(false)} className={pathname === '/videos' ? 'active' : ''}>Videolar</Link>
+                    <Link href="/contact" onClick={() => setMenuOpen(false)} className={pathname === '/contact' ? 'active' : ''}>İletişim</Link>
+                </div>
+                <div className='NavbarSocial'>
+                    <Link target='_blank' href="https://www.instagram.com/arc.damlagocer/"><FaInstagram /></Link>
+                    <Link target='_blank' href="https://api.whatsapp.com/send/?phone=%2B905050459890"><FaWhatsapp /></Link>
+                    <Link target='_blank' href="https://www.youtube.com/@arc.damlag%C3%B6%C3%A7er"><FaYoutube /></Link>
+                    <Link target='_blank' href="https://www.linkedin.com/in/damla-g%C3%B6%C3%A7er-1a6948312/"><FaLinkedin /></Link>
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

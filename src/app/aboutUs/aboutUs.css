@@ -28,3 +28,18 @@
     line-height: 30px;
     flex-wrap: wrap-reverse;
 }
+
+@media (max-width: 1200px) {
+    .aboutPagePClass {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      height: max-content;
+    }
+
+    .aboutPagePClass div{
+        width: 100%;
+    }
+  }

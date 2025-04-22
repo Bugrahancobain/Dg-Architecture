@@ -7,7 +7,7 @@ function aboutUs() {
                 <div>
                     <img style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }} src="/about_Us_Image.jpg" alt="Damla_Gocer_Mimarlik_Hakkimizda_Image" />
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
+                <div className='aboutUsDiv'>
                     <h2>Hakkımızda</h2>
                     <p>DG Mimarlık, kurucusu Mimar Damla Göçer’ın liderliğinde hayata geçen, mimariyi yalnızca bir yapı üretme süreci değil; aynı zamanda yaşam alanlarına ruh katma sanatı olarak gören bir tasarım ofisidir.
 

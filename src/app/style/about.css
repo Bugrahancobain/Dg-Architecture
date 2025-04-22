@@ -25,3 +25,24 @@
     line-height: 30px;
     flex-wrap: wrap-reverse;
 }
+
+.aboutUsDiv{
+    display: "flex";
+    flex-direction: "column"; 
+    justify-content: "space-around" 
+}
+
+@media (max-width: 1200px) {
+    .aboutPClass {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      height: max-content;
+    }
+
+    .aboutPClass div{
+        width: 100%;
+    }
+  }

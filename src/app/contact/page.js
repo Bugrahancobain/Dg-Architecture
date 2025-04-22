@@ -68,7 +68,7 @@ function Page() {
                     </form>
                 </div>
                 <div className="contactInfo">
-                    <h1>İletişim bilgilerimiz</h1>
+                    <h1>İletişim Bilgilerimiz</h1>
                     <div className='footerContactDiv'>
                         <div>
                             <Link href="https://www.google.com/maps?q=Central+Balat+A+Blok+303/34+BURSA" target='_blank' style={{ display: "flex" }}>

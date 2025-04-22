@@ -83,3 +83,12 @@ h6{
 .footerProjectList a {
     text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+    .footerMain {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 50px;
+    }
+  }
