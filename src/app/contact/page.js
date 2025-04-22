@@ -103,7 +103,7 @@ function Page() {
                             </Link>
                         </div>
                         <div>
-                            <Link href="#" target='_blank' style={{ display: "flex" }}>
+                            <Link href="https://www.youtube.com/@arc.damlag%C3%B6%C3%A7er" target='_blank' style={{ display: "flex" }}>
                                 <FaYoutube />
                                 <div>
                                     : @arc.damlagocer

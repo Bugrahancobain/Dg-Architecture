@@ -35,7 +35,7 @@ export default async function Footer() {
                         <Link target='_blank' href="https://api.whatsapp.com/send/?phone=%2B905050459890&text&type=phone_number&app_absent=0">
                             <FaWhatsapp />
                         </Link>
-                        <Link target='_blank' href="#">
+                        <Link target='_blank' href="https://www.youtube.com/@arc.damlag%C3%B6%C3%A7er">
                             <FaYoutube />
                         </Link>
                         <Link target='_blank' href="https://www.linkedin.com/in/damla-g%C3%B6%C3%A7er-1a6948312/">
