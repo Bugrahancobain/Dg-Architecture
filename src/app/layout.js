@@ -6,10 +6,40 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import Script from "next/script";
 
 export const metadata = {
-  title: "DG Mimarlık",
-  description: "Buğrahan Çoban",
+  title: "DG Mimarlık | Modern ve Fonksiyonel Mimari Projeler",
+  description:
+    "DG Mimarlık; konut, ticari alan ve yaşam projelerinde modern ve fonksiyonel çözümler sunar. Bursa merkezli mimarlık ofisimizle kaliteli ve estetik projeler üretiyoruz.",
+  keywords: [
+    "mimarlık",
+    "dg mimarlık",
+    "mimari proje",
+    "iç mimarlık",
+    "mimari tasarım",
+    "Bursa mimarlık",
+    "mimari görselleştirme",
+    "konut projesi",
+    "villa tasarımı",
+    "iç mekan tasarımı"
+  ],
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "DG Mimarlık | Modern ve Fonksiyonel Mimari Projeler",
+    description:
+      "DG Mimarlık; estetik, sürdürülebilir ve kullanıcı odaklı projeler üretir. Web sitemizden tamamlanan ve devam eden projelerimizi inceleyin.",
+    url: "https://www.dgmimarlik.com", // varsa senin domain
+    siteName: "DG Mimarlık",
+    images: [
+      {
+        url: "/dg-mimarlik-logo.png", // varsa bir sosyal medya paylaşım görseli
+        width: 1200,
+        height: 630,
+        alt: "DG Mimarlık Projeleri",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
   },
 };
 
