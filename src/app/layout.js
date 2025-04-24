@@ -28,7 +28,7 @@ export const metadata = {
     title: "DG Mimarlık | Modern ve Fonksiyonel Mimari Projeler",
     description:
       "DG Mimarlık; estetik, sürdürülebilir ve kullanıcı odaklı projeler üretir. Web sitemizden tamamlanan ve devam eden projelerimizi inceleyin.",
-    url: "https://www.dgmimarlik.com", // varsa senin domain
+    url: "https://www.damlagocermimarlik.com", // varsa senin domain
     siteName: "DG Mimarlık",
     images: [
       {
