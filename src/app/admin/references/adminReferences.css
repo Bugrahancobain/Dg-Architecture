@@ -320,3 +320,14 @@
     cursor: pointer;
     font-weight: bold;
   }
+
+  .adminReferencesPopup textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    resize: vertical;
+    font-size: 14px;
+    box-sizing: border-box;
+  }

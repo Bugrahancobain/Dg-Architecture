@@ -25,6 +25,9 @@ function AdminSidebar() {
                 <Link className="adminSideBarLink" href={`/admin/companys`}>
                     Çözüm Ortakları
                 </Link>
+                <Link className="adminSideBarLink" href={`/admin/services`}>
+                    Hizmetlerimiz
+                </Link>
             </div>
             <div className="adminSideBarLinkDiv">
                 <div

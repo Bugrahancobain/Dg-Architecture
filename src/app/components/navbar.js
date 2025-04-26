@@ -21,14 +21,15 @@ function Navbar() {
                 {menuOpen ? <FaTimes /> : <FaBars />}
             </div>
 
-            <div className={`NavbarLinks ${menuOpen ? 'open' : ''}`}>
-                <div>
+            <div className={`NavbarLinksWrapper ${menuOpen ? 'open' : ''}`}>
+                <div className="NavbarLinks">
                     <Link href="/" onClick={() => setMenuOpen(false)} className={pathname === '/' ? 'active' : ''}>Ana Sayfa</Link>
                     <Link href="/aboutUs" onClick={() => setMenuOpen(false)} className={pathname === '/aboutUs' ? 'active' : ''}>Hakkımızda</Link>
                     <Link href="/projects" onClick={() => setMenuOpen(false)} className={pathname === '/projects' ? 'active' : ''}>Projeler</Link>
                     <Link href="/videos" onClick={() => setMenuOpen(false)} className={pathname === '/videos' ? 'active' : ''}>Videolar</Link>
                     <Link href="/contact" onClick={() => setMenuOpen(false)} className={pathname === '/contact' ? 'active' : ''}>İletişim</Link>
                 </div>
+
                 <div className='NavbarSocial'>
                     <Link target='_blank' href="https://www.instagram.com/arc.damlagocer/"><FaInstagram /></Link>
                     <Link target='_blank' href="https://api.whatsapp.com/send/?phone=%2B905050459890"><FaWhatsapp /></Link>
