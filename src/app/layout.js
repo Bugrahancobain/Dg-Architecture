@@ -54,13 +54,10 @@ export default function RootLayout({ children }) {
       <head>
         {/* Google Analytics */}
         <Script
-          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-DM5DXRFNMZ"
-        />
-        <Script
-          id="google-analytics"
           strategy="afterInteractive"
-        >
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -68,6 +65,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-DM5DXRFNMZ');
           `}
         </Script>
+
       </head>
       <body className={poppins.className}>
         <Navbar />
